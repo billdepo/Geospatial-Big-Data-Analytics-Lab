@@ -1,0 +1,69 @@
+%χαρακτηριστικά κειμένου
+\documentclass[10pt, a4paper]{article}
+% Χρήση γλωσσών
+\usepackage[utf8]{inputenc}
+\usepackage[draft=false, colorlinks=true, allcolors = black, urlcolor=blue]{hyperref} %set url colors
+\usepackage{graphicx} % for better use of images
+\graphicspath{{figures}} %Setting the graphicspath containing images/figures
+
+\usepackage{minted} % used for embedding code in the report
+
+\usepackage{amsmath} % used for multiline math expressions
+\usepackage{tcolorbox} % used for R code formatting
+\tcbuselibrary{minted,skins}
+
+\usepackage{placeins} % used to properly place figures in their subsections and not next ones
+
+\usepackage{url} % used for using urls in the references section
+
+% FIRST PAGE OF DOCUMENT
+% NTUA logo on top
+
+\pagenumbering{gobble} %remove page numbering
+\begin{figure}
+    \centering
+    \includegraphics[width=3cm]{/NTUA_logo_transparent.png}
+\end{figure}
+
+\title{
+National Technical University of Athens \\
+MSc - Data Science and Machine Learning \\\ \\\
+\textbf{Geospatial Big Data Analytics} \\
+\vspace*{1cm}
+Lab 2\\
+Geospatial Services and Web Applications
+\vspace*{4cm}}
+
+\author{Vasileios Depastas \\ MSc student \\ \\ A.M: 03400131 \\
+\href{mailto:vasileiosdepastas@mail.ntua.gr}{vasileiosdepastas@mail.ntua.gr} 
+}
+\date{\vspace*{4cm}May 2022}
+
+
+\begin{document}
+
+\maketitle %create the first page that contains the title and all other elements
+
+\newpage %start of a new page
+
+\thispagestyle{empty}
+\tableofcontents
+    
+\listoffigures
+    
+\listoftables
+    
+\clearpage
+\newpage
+\pagenumbering{arabic} %reenable page numbering
+
+\input{text.tex} %this tex file contains main body of our document
+
+\end{document}
+
+
+
+
+
+
+

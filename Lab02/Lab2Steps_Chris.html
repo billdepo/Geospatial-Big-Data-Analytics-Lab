@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Geospatial Lab2 Steps</title>
+</head>
+<body>
+
+<h1> 2o Εργαστήριο - Help me! </h1>
+
+<h2>Step 1</h2>
+<p>
+<ul>
+
+<li> Χρήσιμο <a href="https://carpentries-incubator.github.io/geospatial-python/aio/index.html">overview</a> για τους βασικούς τύπους δεδομένων που χρησιμοποιούνται στις <br>
+γεωχωρικές αναλύσεις (raster & vector). Περιγράφει τις βασικές βιβλιοθήκες της Python (rasterio, geopandas κτλ.) για επεξεργασία γεωχωρικών δεδομένων. </li>
+
+<li> <a href="https://www.geoseer.net">geoseer</a> - Ίσως το πιο βολικό site για δεδομένα μέσω WFS/WMS αιτημάτων.
+
+</ul>
+</p>
+
+<h2>Step 2</h2>
+<p>- Χρησιμοποιούμε rasterio (επεξεργασία εικόνων με numpy arrays)</p>
+<p>- Χρήσιμα link: 
+<ul>
+
+<li><a href="https://rasterio.readthedocs.io/en/latest/quickstart.html">Python Quickstart </a> - για βασικά operations με raster αρχεία. </li>
+
+<li><a href="https://thinkinfi.com/clip-raster-with-a-shape-file-in-python/">Clip Raster</a> - Χρήσιμο link για περικοπή εικόνας. </li>
+
+<li> <a href = "https://automating-gis-processes.github.io/CSC/notebooks/L5/plotting-raster.html"> Visualizing raster layers </a>- για απεικόνιση των φασμάτων μέσω της matplotlib.</li>
+
+</ul>
+</p>
+
+<h2> Step 3 </h2>
+<p> <b>1.</b> Για τα γραφήματα με την εξέλιξη μετεωρολογικών μεταβλητών ακολουθούμε τα εξής βήματα:
+<ul>
+
+<li> Πρώτα επιλέγουμε ένα σημείο εντός του πολυγώνουμε που έχουμε σχηματίσει. Για να επιλέξουμε το σημείο μπορούμε είτε <br>
+να επιλέξουμε τυχαία κάποιο pixel της περικομμένης εικόνας και χρησιμοποιώντας το προβολικό σύστημα που έχει η εικόνα μας να <br>
+βρούμε σε ποια (φ,λ) ή (latitude, longitude) αντιστοιχεί είτε να επιλέξουμε κατευθείαν το σημείο στον χάρτη και να βρούμε σε ποιο <br>
+pixel αντιστοιχεί.</li>
+
+<li> Για τις μετατροπές σημείου σε pixel και αντίστροφα χρήσιμο είναι το εξής link: <a href="https://github.com/rasterio/affine">Rasterio/Affine</a> </li>
+
+<li> Αφού έχουμε βρει τα (φ,λ) του σημείου που θέλουμε να επιλέξουμε πηγαίνουμε στο <a href="https://power.larc.nasa.gov/data-access-viewer/">portal της NASA</a> και βρίσκουμε <br>
+το σημείο εισάγοντας τις συντεταγμένες. Αφού επιλέξουμε το εύρος της χρονικής περιόδου και διάφορες μετεωρολογικές <br>
+μετρήσεις (π.χ. θερμοκρασία, υγρασία, κα) κατεβάζουμε τα δεδομένα σε ότι τύπο αρχείου μας βολεύει για να κάνουμε τα <br>
+γραφήματα (π.χ. csv για pandas).</li>
+
+<li> Έχοντας σε ποια pixel αντιστοιχεί το σημείο που έχουμε επιλέξει το απεικονίζουμε με μια ένδειξη "marker" στην RGB <br>
+αναπαράσταση της περικομμένης εικόνας. </li>
+
+<li> Τώρα τα γραφήματα των μεταβλητών υλοποιούνται εύκολα μέσω των βασικών βιβλιοθηκών της Python (pandas, matplotlib, κτλ).</li>
+
+</ul>
+
+<b>2.</b> Για τα vector δεδομένα από το <a href="https://geodata.gov.gr">https://geodata.gov.gr</a> ακολουθούμε τα εξής βήματα:
+<ul>
+<li>Για τις πράξεις μεταξύ πολυγώνων (ένωση, τομή, κτλ.) πολύ χρήσιμο είναι το εξής βίντεο στο  <a href="https://www.youtube.com/watch?v=HtYxzt55-1w">YouTube.</a> </li>
+
+</ul>
+</p>
+
+<h2> Step 4 </h2>
+<ul>
+
+<li><a href = "https://getbootstrap.com/docs/3.3/components/#glyphicons">Markers<a/> για την Folium και ένα χρήσιμο <a href = "https://www.youtube.com/watch?v=QpBmO35pmVE&t=946s">βίντεο<a/> για διάφορα customizations στα Markers.</li>
+<li>Ο τύπος των Linestrings της βιβλιοθήκης Shapely είναι λίγο πρόβλημα με τη Folium,<br>
+το link <a href = "https://anitagraser.com/2019/10/31/interactive-plots-for-geopandas-geodataframe-of-linestrings/">Linestrings in Folium<a/>
+εξηγεί πως μπορούμε να βάλουμε Linestrings σε Folium <br>
+χάρτες μέσω του Choropleth.</li>
+</ul>
+
+</body>
+</html>
